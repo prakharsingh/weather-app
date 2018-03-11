@@ -1,0 +1,5 @@
+.slot {
+  border-right: 1px solid #eee;
+  padding: 5px 10px;
+  cursor: pointer;
+}

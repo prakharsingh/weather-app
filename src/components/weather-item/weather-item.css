@@ -1,0 +1,12 @@
+.leftContent {
+  display: inline-block;
+  vertical-align: middle;
+  width: 48%;
+  text-align: center;
+}
+
+.rightContent {
+  display: inline-block;
+  vertical-align: middle;
+  width: 48%;
+}

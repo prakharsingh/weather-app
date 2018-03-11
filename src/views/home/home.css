@@ -1,0 +1,31 @@
+.container {
+  width: 632px;
+  border: 1px solid #000000;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.block{
+  display: block;
+  width: 100%;
+  margin: 10px 0 10px;
+}
+
+.weatherContainer{
+  display: inline-block;
+  width: calc(100% - 70px);
+  min-height: 100px;
+}
+
+.daysContainer{
+  display: inline-block ;
+  width: 60px;
+  border-left:1px solid #eee;
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
+
+.slotsContainer{
+  display: flex;
+  border-top:1px solid #eee;
+}
