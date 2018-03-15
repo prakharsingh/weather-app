@@ -11,7 +11,7 @@ const Slot = ({ title, slot, onSelection }) => {
 };
 
 Slot.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default Slot;

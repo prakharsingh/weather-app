@@ -20,3 +20,6 @@ The app has been developed over Facebook's create-react-app boilerplate. See htt
 ### Testing
 All spec files are in their respective component folders. To run tests do `npm run test`.
 Jest and Enzyme are used for testing see: https://github.com/facebook/jest and http://airbnb.io/enzyme/
+
+### Linting
+`npm run lint` and see output for any lint warnings/errors

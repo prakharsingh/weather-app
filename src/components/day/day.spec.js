@@ -22,7 +22,7 @@ describe('<Day /> component spec', () => {
     expect(button).toHaveLength(1);
   });
 
-  it('should call a function onClick', () => {
+  it('should call a function when clicked', () => {
     const button = wrapper.find('button');
     button.simulate('click');
     expect(dummyProps.onSelection).toHaveBeenCalled();

@@ -1,5 +1,13 @@
 'use strict';
 
+// raf polyfill for react 16 requestAnimationFrame issue
+require('raf');
+
+window.requestAnimationFrame = function (callback) {
+  setTimeout(callback, 0);
+  return 0;
+};
+
 if (typeof Promise === 'undefined') {
   // Rejection tracking prevents a common issue where React gets into an
   // inconsistent state due to an error, but it gets swallowed by a Promise,

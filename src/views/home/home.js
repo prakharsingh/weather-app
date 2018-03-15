@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchWeather } from '../../api/open-weather';
+import fetchWeather from '../../api/open-weather';
 import { Day, Title, Slot, WeatherItem } from '../../components';
 import styles from './home.css';
 
@@ -19,16 +19,16 @@ class Home extends React.Component {
 
   async componentDidMount() {
     const response = await fetchWeather('37bb8b26b73d027506e5bfa6169cea89');
-    const { message, city, list} = await response.json();
+    const { message, city, list } = await response.json();
 
-    if(response.status >= 200 && response.status <=300) {
+    if (response.status >= 200 && response.status <= 300) {
       const groupedWeather = list.reduce((sorted, item) => {
-        const day =  new Date(item.dt * 1000).getDay();
+        const day = new Date(item.dt * 1000).getDay();
         const dayName = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][day];
-        const exists = sorted.find((item) => (item.name === dayName));
+        const exists = sorted.find((sortedItem) => (sortedItem.name === dayName));
 
-        if(!exists) {
-          sorted = sorted.concat([{ name: dayName, items: [item]}]);
+        if (!exists) {
+          sorted = sorted.concat([{ name: dayName, items: [item] }]);
         } else {
           const idx = sorted.indexOf(exists);
           exists.items.push(item);
@@ -46,7 +46,7 @@ class Home extends React.Component {
       });
     }
 
-    this.setState({ error: message, isLoading: false});
+    return this.setState({ error: message, isLoading: false });
   }
 
   render() {
@@ -105,7 +105,7 @@ class Home extends React.Component {
         </div>
       </div>
     );
-  };
+  }
 
   handleDaySelection = (day) => {
     this.setState({ selectedDay: day, selectedSlot: day.items[0] });

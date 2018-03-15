@@ -743,7 +743,13 @@ describe('<Home /> component spec', () => {
     expect(wrapper.contains(<div> Loading ...</div>)).toBe(true);
   });
 
-  it('should render weather', async (done) => {
+  it('should be defined', () => {
+    const wrapper = shallow(<Home/>, { disableLifecycleMethods: true });
+    expect(wrapper).toBeDefined();
+  });
+
+
+  it('should render the weather', async (done) => {
     const fakePromise = Promise.resolve(mockResponse(200, null, JSON.stringify(fakeData)));
     window.fetch = jest.fn().mockImplementationOnce(() => (fakePromise));
 

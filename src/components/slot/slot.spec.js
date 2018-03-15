@@ -17,13 +17,13 @@ describe('<Slot /> component spec', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it('should render a div with title', () => {
+  it('should render a title', () => {
     const div = wrapper.find('div');
     expect(div).toHaveLength(1);
     expect(div.prop('children')).toEqual(dummyProps.title);
   });
 
-  it('should call a function onClick', () => {
+  it('should call a function when clicked', () => {
     const div = wrapper.find('div');
     div.simulate('click');
     expect(dummyProps.onSelection).toHaveBeenCalled();

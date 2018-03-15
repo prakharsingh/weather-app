@@ -3,7 +3,11 @@ import styles from './weather-item.css';
 
 const baseUrl = 'https://openweathermap.org/img/w/';
 
-const WeatherItem = ({ weather: { icon, description }, info: { temp, temp_max, temp_min }, wind: { speed } }) => (
+// eslint-disable-next-line camelcase
+const WeatherItem = ({
+  weather: { icon, description },
+  info: { temp, temp_max: max, temp_min: min }, wind: { speed },
+}) => (
   <div>
     <div className={styles.leftContent}>
       <img src={`${baseUrl}${icon}.png`} alt="weather-icon"/>
@@ -12,8 +16,8 @@ const WeatherItem = ({ weather: { icon, description }, info: { temp, temp_max, t
     </div>
     <div className={styles.rightContent}>
       <ul>
-        <li><h5>Max Temperature: {temp_max}&#176; C</h5></li>
-        <li><h5>Min Temperature: {temp_min}&#176; C</h5></li>
+        <li><h5>Max Temperature: {max}&#176; C</h5></li>
+        <li><h5>Min Temperature: {min}&#176; C</h5></li>
         <li><h5>Wind Speed: {speed} kmph</h5></li>
       </ul>
     </div>
@@ -21,4 +25,3 @@ const WeatherItem = ({ weather: { icon, description }, info: { temp, temp_max, t
 );
 
 export default WeatherItem;
-
