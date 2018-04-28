@@ -10,9 +10,9 @@
     "object-assign": "4.1.1",
     "promise": "8.0.1",
     "prop-types": "^15.6.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "whatwg-fetch": "^2.0.3"
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "whatwg-fetch": "^2.0.4"
   },
   "homepage": "http://prakharsingh.github.io/weather-app",
   "scripts": {
@@ -79,7 +79,7 @@
     "css-loader": "0.28.4",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^4.4.1",
+    "eslint": "^4.19.1",
     "eslint-config-react-app": "^2.0.1",
     "eslint-loader": "1.9.0",
     "eslint-plugin-flowtype": "2.35.0",
